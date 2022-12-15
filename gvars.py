@@ -6,8 +6,9 @@ from datetime import datetime
 
 # MICROSOFT GRAPH API KEYS HERE!
 APP_ID = config('APP_CLIENT_ID')
-APP_SECRET  = config('APP_CLIENT_SECRET')
-MS_GRAPH_API_URL  = 'https://graph.microsoft.com/v1.0/me'
+APP_SECRET = config('APP_CLIENT_SECRET')
+AUTHORIZATION_CODE = config('AUTHORIZATION_CODE')
+MS_GRAPH_API_URL  = 'https://graph.microsoft.com/v1.0/'
 AUTHORITY_URL = 'https://login.microsoftonline.com/consumers/'
 
 # this block checks whether you have your keys written or not
@@ -30,16 +31,16 @@ SCOPES = [
     'Mail.ReadWrite.Shared',
     'Mail.Send',
     'Mail.Send.Shared',
+    'Notes.Create',
     'Notes.ReadWrite.All',
     'Notes.ReadWrite.CreatedByApp',
     'Tasks.ReadWrite',
     'Tasks.ReadWrite.Shared',
-    'User.Export.All',
-    'User.Invite.All',
-    'User.ManageIdentities.All',
-    'User.ReadWrite',
-    'User.ReadWrite.All',
-    'UserActivity.ReadWrite.CreatedByApp'
+    # 'User.Export.All',
+    # 'User.Invite.All',
+    # 'User.ManageIdentities.All',
+    'User.ReadWrite'
+    # 'User.ReadWrite.All'
 ]
 
 
