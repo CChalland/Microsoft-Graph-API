@@ -1,0 +1,435 @@
+<html lang="en-US">
+	<head>
+		<title>INC</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="created" content="2022-12-14T11:00:00.0000000" />
+	</head>
+	<body data-absolute-enabled="true" style="font-family:Calibri;font-size:11pt">
+		<div id="div:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{14}" style="position:absolute;left:2364px;top:102px;width:718px">
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{16}" style="margin-top:0pt;margin-bottom:0pt">[DB Instance: E3_Oracle_GDR_IDL]</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{18}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{22}" style="margin-top:0pt;margin-bottom:0pt">[DB Instance: E3_Oracle_GDR_IDL]</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{24}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{28}" style="margin-top:0pt;margin-bottom:0pt">[DB Instance: E3 Oracle GDR]</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{30}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{34}" style="margin-top:0pt;margin-bottom:0pt">[DB Instance: E3 Oracle GDR]</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{36}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{40}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{42}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{44}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{46}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{48}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{50}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;001&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{54}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{56}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{58}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{60}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{62}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{64}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;016&#39;, &#39;017&#39;, &#39;018&#39;, &#39;019&#39;, &#39;020&#39;, &#39;021&#39;, &#39;022&#39;, &#39;023&#39;, &#39;024&#39;, &#39;026&#39;, &#39;027&#39;, &#39;029&#39;, &#39;030&#39;, &#39;031&#39;, &#39;032&#39;, &#39;033&#39;, &#39;034&#39;, &#39;035&#39;, &#39;036&#39;, &#39;040&#39;, &#39;041&#39;, &#39;043&#39;, &#39;044&#39;, &#39;045&#39;, &#39;047&#39;, &#39;050&#39;, &#39;051&#39;, &#39;052&#39;, &#39;055&#39;, &#39;056&#39;, &#39;057&#39;, &#39;058&#39;, &#39;060&#39;, &#39;061&#39;, &#39;062&#39;, &#39;063&#39;, &#39;074&#39;, &#39;075&#39;, &#39;076&#39;, &#39;077&#39;, &#39;078&#39;, &#39;079&#39;, &#39;080&#39;, &#39;081&#39;, &#39;082&#39;, &#39;083&#39;, &#39;084&#39;, &#39;085&#39;, &#39;086&#39;, &#39;087&#39;, &#39;088&#39;, &#39;089&#39;, &#39;090&#39;, &#39;091&#39;, &#39;092 &#39;, &#39;316&#39;, &#39;322&#39;, &#39;323&#39;, &#39;326&#39;, &#39;327&#39;, &#39;329&#39;, &#39;333&#39;, &#39;336&#39;, &#39;356&#39;, &#39;374&#39;, &#39;375&#39;, &#39;376&#39;, &#39;377&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{68}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{70}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{72}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{74}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{76}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{78}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;006&#39;, &#39;007&#39;, &#39;008&#39;, &#39;009&#39;, &#39;010&#39;, &#39;011&#39;, &#39;013&#39;, &#39;014&#39;, &#39;015&#39;, &#39;025&#39;, &#39;039&#39;, &#39;042&#39;, &#39;054&#39;, &#39;059&#39;, &#39;093&#39;, &#39;012&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{82}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{84}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{86}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{88}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{90}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{92}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;012&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{96}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{98}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{100}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{102}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{104}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{106}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;002&#39;, &#39;003&#39;, &#39;004&#39;, &#39;005&#39;, &#39;028&#39;, &#39;046&#39;, &#39;048&#39;, &#39;049&#39;, &#39;053&#39;, &#39;501&#39;, &#39;502&#39;, &#39;503&#39;, &#39;504&#39;, &#39;505&#39;, &#39;506&#39;, &#39;507&#39;, &#39;508&#39;, &#39;509&#39;, &#39;510&#39;, &#39;511&#39;, &#39;512&#39;, &#39;513&#39;, &#39;514&#39;, &#39;515&#39;, &#39;516&#39;, &#39;517&#39;, &#39;518&#39;, &#39;519&#39;, &#39;520&#39;, &#39;521&#39;, &#39;522&#39;, &#39;523&#39;, &#39;524&#39;, &#39;525&#39;, &#39;526&#39;, &#39;527&#39;, &#39;528&#39;, &#39;529&#39;, &#39;530&#39;, &#39;531&#39;, &#39;532&#39;, &#39;533&#39;, &#39;534&#39;, &#39;535&#39;, &#39;536&#39;, &#39;537&#39;, &#39;538&#39;, &#39;539&#39;, &#39;540&#39;, &#39;541&#39;, &#39;542&#39;, &#39;543&#39;, &#39;544&#39;, &#39;545&#39;, &#39;546&#39;, &#39;547&#39;, &#39;548&#39;, &#39;549&#39;, &#39;550&#39;, &#39;551&#39;, &#39;552&#39;, &#39;553&#39;, &#39;554&#39;, &#39;555&#39;, &#39;556&#39;, &#39;558&#39;, &#39;559&#39;, &#39;560&#39;, &#39;561&#39;, &#39;562&#39;, &#39;563&#39;, &#39;564&#39;, &#39;565&#39;, &#39;566&#39;, &#39;567&#39;, &#39;568&#39;, &#39;569&#39;, &#39;570&#39;, &#39;571&#39;, &#39;572&#39;, &#39;573&#39;, &#39;574&#39;, &#39;575&#39;, &#39;576&#39;, &#39;577&#39;, &#39;578&#39;, &#39;579&#39;, &#39;580&#39;, &#39;581&#39;, &#39;582&#39;, &#39;583&#39;, &#39;584&#39;, &#39;585&#39;, &#39;586&#39;, &#39;587&#39;, &#39;588&#39;, &#39;589&#39;, &#39;590&#39;, &#39;591&#39;, &#39;592&#39;, &#39;593&#39;, &#39;594&#39;, &#39;595&#39;, &#39;596&#39;, &#39;597&#39;, &#39;598&#39;, &#39;599&#39;, &#39;600&#39;, &#39;601&#39;, &#39;602&#39;, &#39;603&#39;, &#39;604&#39;, &#39;605&#39;, &#39;606&#39;, &#39;607&#39;, &#39;608&#39;, &#39;609&#39;, &#39;610&#39;, &#39;611&#39;, &#39;612&#39;, &#39;613&#39;, &#39;614&#39;, &#39;615&#39;, &#39;616&#39;, &#39;617&#39;, &#39;618&#39;, &#39;619&#39;, &#39;620&#39;, &#39;621&#39;, &#39;622&#39;, &#39;623&#39;, &#39;624&#39;, &#39;625&#39;, &#39;626&#39;, &#39;627&#39;, &#39;628&#39;, &#39;629&#39;, &#39;630&#39;, &#39;631&#39;, &#39;632&#39;, &#39;633&#39;, &#39;634&#39;, &#39;635&#39;, &#39;636&#39;, &#39;637&#39;, &#39;638&#39;, &#39;639&#39;, &#39;640&#39;, &#39;641&#39;, &#39;642&#39;, &#39;643&#39;, &#39;644&#39;, &#39;645&#39;, &#39;646&#39;, &#39;647&#39;, &#39;648&#39;, &#39;649&#39;, &#39;650&#39;, &#39;651&#39;, &#39;652&#39;, &#39;653&#39;, &#39;654&#39;, &#39;655&#39;, &#39;656&#39;, &#39;657&#39;, &#39;658&#39;, &#39;659&#39;, &#39;660&#39;, &#39;661&#39;, &#39;662&#39;, &#39;663&#39;, &#39;664&#39;, &#39;665&#39;, &#39;666&#39;, &#39;667&#39;, &#39;668&#39;, &#39;669&#39;, &#39;670&#39;, &#39;671&#39;, &#39;672&#39;, &#39;673&#39;, &#39;674&#39;, &#39;675&#39;, &#39;676&#39;, &#39;677&#39;, &#39;678&#39;, &#39;679&#39;, &#39;680&#39;, &#39;681&#39;, &#39;682&#39;, &#39;683&#39;, &#39;684&#39;, &#39;685&#39;, &#39;686&#39;, &#39;687&#39;, &#39;688&#39;, &#39;689&#39;, &#39;690&#39;, &#39;691&#39;, &#39;692&#39;, &#39;693&#39;, &#39;694&#39;, &#39;695&#39;, &#39;696&#39;, &#39;697&#39;, &#39;698&#39;, &#39;699&#39;, &#39;700&#39;, &#39;701&#39;, &#39;702&#39;, &#39;703&#39;, &#39;704&#39;, &#39;705&#39;, &#39;706&#39;, &#39;707&#39;, &#39;708&#39;, &#39;709&#39;, &#39;710&#39;, &#39;711&#39;, &#39;712&#39;, &#39;713&#39;, &#39;714&#39;, &#39;715&#39;, &#39;716&#39;, &#39;717&#39;, &#39;718&#39;, &#39;719&#39;, &#39;720&#39;, &#39;721&#39;, &#39;722&#39;, &#39;723&#39;, &#39;724&#39;, &#39;725&#39;, &#39;726&#39;, &#39;727&#39;, &#39;728&#39;, &#39;729&#39;, &#39;730&#39;, &#39;731&#39;, &#39;732&#39;, &#39;733&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{110}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ count(*)  WJXBFS1</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{112}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_RECIP_CARD_ACCT	a23</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{114}" style="margin-top:0pt;margin-bottom:0pt">where	(a23.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{116}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a23.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{118}" style="margin-top:0pt;margin-bottom:0pt"> and a23.RECIP_ID = 0</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{120}" style="margin-top:0pt;margin-bottom:0pt"> and SUBSTR(a23.CLNT_ORGN_ID, 1, 3) in (&#39;037&#39;, &#39;070&#39;, &#39;071&#39;, &#39;072&#39;, &#39;073&#39;, &#39;094&#39;, &#39;095&#39;, &#39;096&#39;, &#39;097&#39;, &#39;098&#39;, &#39;100&#39;, &#39;101&#39;, &#39;102&#39;, &#39;300&#39;, &#39;301&#39;, &#39;302&#39;, &#39;337&#39;, &#39;370&#39;, &#39;371&#39;, &#39;372&#39;, &#39;373&#39;, &#39;394&#39;, &#39;395&#39;, &#39;396&#39;, &#39;397&#39;, &#39;398&#39;))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{124}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ a01.ISO_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{126}" style="margin-top:0pt;margin-bottom:0pt">a01.CURR_NM  CURR_NM</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{128}" style="margin-top:0pt;margin-bottom:0pt">from	DW02.CURRENCY	a01</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{132}" style="margin-top:0pt;margin-bottom:0pt">create table ZZTLBG0R019OP000(</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{134}" style="margin-top:0pt;margin-bottom:0pt">BILL_CURR_CD	CHAR(3), </p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{136}" style="margin-top:0pt;margin-bottom:0pt">CURR_NM	CHAR(30))</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{140}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{144}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{148}" style="margin-top:0pt;margin-bottom:0pt">insert into ZZTLBG0R019OP000 values (&#39;ADP&#39;, &#39;ANDORRAN PESETA               &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{150}" style="margin-top:0pt;margin-bottom:0pt">[The rest of the INSERT statements have been omitted from display].</p>
+			<br />
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{154}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ a11.BILL_DT  BILL_DT,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{156}" style="margin-top:0pt;margin-bottom:0pt">a11.BILL_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{158}" style="margin-top:0pt;margin-bottom:0pt">a12.CURR_NM  CURR_NM,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{160}" style="margin-top:0pt;margin-bottom:0pt">a11.BASE_ACCT_ID  BASE_ACCT_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{162}" style="margin-top:0pt;margin-bottom:0pt">a11.BASIC_SUPP_NO  BASIC_SUPP_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{164}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM1  CM_EMB_NM1,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{166}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_DT  TRANS_DT,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{168}" style="margin-top:0pt;margin-bottom:0pt">a11.GEN_MJR_INDUS_CD  GEN_MJR_INDUS_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{170}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_INDUS_DESC_CD  SE_INDUS_DESC_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{172}" style="margin-top:0pt;margin-bottom:0pt">a11.SUBM_CURR_CD  SUBM_CURR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{174}" style="margin-top:0pt;margin-bottom:0pt">a11.CTRY_ID  CTRY_ID_2,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{176}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO  SE_NO_0924,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{178}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_SEQ_NO  TRANS_SEQ_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{180}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_MO_NO  YR_MO_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{182}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_NO  YR_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{184}" style="margin-top:0pt;margin-bottom:0pt">Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End  ACCT_STA_IN_TX,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{186}" style="margin-top:0pt;margin-bottom:0pt">a11.CG_ID  CG_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{188}" style="margin-top:0pt;margin-bottom:0pt">a11.COST_CTR_CD  COST_CTR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{190}" style="margin-top:0pt;margin-bottom:0pt">a11.EMP_ID  EMP_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{192}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM  CM_EMB_NM_New,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{194}" style="margin-top:0pt;margin-bottom:0pt">a11.CARD_MKT_RGN_CD  CARD_MKT_RGN_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{196}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO  SE_NO_0923,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{198}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &gt; 0 THEN a11.BILL_AM ELSE 0 END)  WJXBFS1,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{200}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &lt; 0 THEN a11.BILL_AM ELSE 0 END)  WJXBFS2,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{202}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &gt; 0 THEN 1 ELSE 0 END)  WJXBFS3</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{204}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_JAPA_CORP_BILLED_UNBILLED_IDL	a11</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{206}" style="margin-top:0pt;margin-bottom:0pt">join	ZZTLBG0R019OP000	a12</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{208}" style="margin-top:0pt;margin-bottom:0pt">  on 	(a11.BILL_CURR_CD = a12.BILL_CURR_CD)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{210}" style="margin-top:0pt;margin-bottom:0pt">where	(a11.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{212}" style="margin-top:0pt;margin-bottom:0pt"> and a11.YR_MO_NO = CASE WHEN extract(month from sysdate) IN (2,3,4,5,6,7,8,9,10,11,12) THEN (concat (extract(year from sysdate),TO_CHAR(SYSDATE, &#39;MM&#39;)) -1) WHEN extract(month from sysdate) IN (1) THEN TO_NUMBER(concat (extract(year from sysdate-31),TO_CHAR(SYSDATE-31, &#39;MM&#39;))) END </p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{214}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{216}" style="margin-top:0pt;margin-bottom:0pt"> and a11.CONV_CURR_CD in (&#39;ZZZ&#39;)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{218}" style="margin-top:0pt;margin-bottom:0pt"> and a11.RECIP_ID = 0)</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{220}" style="margin-top:0pt;margin-bottom:0pt">group by	a11.BILL_DT,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{222}" style="margin-top:0pt;margin-bottom:0pt">a11.BILL_CURR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{224}" style="margin-top:0pt;margin-bottom:0pt">a12.CURR_NM,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{226}" style="margin-top:0pt;margin-bottom:0pt">a11.BASE_ACCT_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{228}" style="margin-top:0pt;margin-bottom:0pt">a11.BASIC_SUPP_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{230}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM1,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{232}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_DT,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{234}" style="margin-top:0pt;margin-bottom:0pt">a11.GEN_MJR_INDUS_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{236}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_INDUS_DESC_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{238}" style="margin-top:0pt;margin-bottom:0pt">a11.SUBM_CURR_CD,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{240}" style="margin-top:0pt;margin-bottom:0pt">a11.CTRY_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{242}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{244}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_SEQ_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{246}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_MO_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{248}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_NO,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{250}" style="margin-top:0pt;margin-bottom:0pt">Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{252}" style="margin-top:0pt;margin-bottom:0pt">a11.CG_ID,</p>
+			<p id="p:{c8fe170b-f87e-2f4e-b767-1ffa4868f657}{254}" style="margin-top:0pt;margin-bottom:0pt">a11.COST_CTR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{10}" style="margin-top:0pt;margin-bottom:0pt">a11.EMP_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{12}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{14}" style="margin-top:0pt;margin-bottom:0pt">a11.CARD_MKT_RGN_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{16}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO</p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{20}" style="margin-top:0pt;margin-bottom:0pt">create table ZZTB328AWP9OP001(</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{22}" style="margin-top:0pt;margin-bottom:0pt">BILL_DT	DATE, </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{24}" style="margin-top:0pt;margin-bottom:0pt">BILL_CURR_CD	CHAR(3), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{26}" style="margin-top:0pt;margin-bottom:0pt">CURR_NM	CHAR(30), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{28}" style="margin-top:0pt;margin-bottom:0pt">BASE_ACCT_ID	CHAR(11), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{30}" style="margin-top:0pt;margin-bottom:0pt">BASIC_SUPP_NO	CHAR(2), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{32}" style="margin-top:0pt;margin-bottom:0pt">CM_EMB_NM1	CHAR(30), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{34}" style="margin-top:0pt;margin-bottom:0pt">TRANS_DT	DATE, </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{36}" style="margin-top:0pt;margin-bottom:0pt">GEN_MJR_INDUS_CD	NUMBER(5, 0), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{38}" style="margin-top:0pt;margin-bottom:0pt">SE_INDUS_DESC_CD	CHAR(3), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{40}" style="margin-top:0pt;margin-bottom:0pt">SUBM_CURR_CD	CHAR(3), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{42}" style="margin-top:0pt;margin-bottom:0pt">CTRY_ID_2	CHAR(3), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{44}" style="margin-top:0pt;margin-bottom:0pt">SE_NO_0924	CHAR(10), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{46}" style="margin-top:0pt;margin-bottom:0pt">TRANS_SEQ_NO	NUMBER(7, 0), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{48}" style="margin-top:0pt;margin-bottom:0pt">YR_MO_NO	CHAR(6), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{50}" style="margin-top:0pt;margin-bottom:0pt">YR_NO	CHAR(4), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{52}" style="margin-top:0pt;margin-bottom:0pt">ACCT_STA_IN_TX	CHAR(1), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{54}" style="margin-top:0pt;margin-bottom:0pt">CG_ID	CHAR(15), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{56}" style="margin-top:0pt;margin-bottom:0pt">COST_CTR_CD	CHAR(13), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{58}" style="margin-top:0pt;margin-bottom:0pt">EMP_ID	CHAR(15), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{60}" style="margin-top:0pt;margin-bottom:0pt">CM_EMB_NM_New	CHAR(30), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{62}" style="margin-top:0pt;margin-bottom:0pt">CARD_MKT_RGN_CD	CHAR(3), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{64}" style="margin-top:0pt;margin-bottom:0pt">SE_NO_0923	CHAR(10), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{66}" style="margin-top:0pt;margin-bottom:0pt">WJXBFS1	NUMBER(38, 2), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{68}" style="margin-top:0pt;margin-bottom:0pt">WJXBFS2	NUMBER(38, 2), </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{70}" style="margin-top:0pt;margin-bottom:0pt">WJXBFS3	NUMBER(38, 2))</p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{74}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{78}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{82}" style="margin-top:0pt;margin-bottom:0pt">insert into ZZTB328AWP9OP001 values (To_Date(&#39;2022-09-03 00:00:00&#39;, &#39;YYYY-MM-DD HH24:MI:SS&#39;), &#39;INR&#39;, &#39;INDIAN RUPEE                  &#39;, &#39;37691959329&#39;, &#39;00&#39;, &#39;3769-195932-91005&#39;, To_Date(&#39;2022-08-03 00:00:00&#39;, &#39;YYYY-MM-DD HH24:MI:SS&#39;), 12, &#39;300&#39;, &#39;INR&#39;, &#39;356&#39;, &#39;9822737490&#39;, 23847, &#39;202209&#39;, &#39;2022&#39;, &#39;A&#39;, &#39;012000000773670&#39;, &#39;             &#39;, &#39;               &#39;, &#39;NOVARTIS - BTA                &#39;, &#39;003&#39;, &#39;9822737490&#39;, 4578, 0, 1)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{84}" style="margin-top:0pt;margin-bottom:0pt">[The rest of the INSERT statements have been omitted from display].</p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{88}" style="margin-top:0pt;margin-bottom:0pt">create table ZZTZZ9CYHT9PO002 nologging as</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{90}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ a11.BILL_DT  BILL_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{92}" style="margin-top:0pt;margin-bottom:0pt">a11.BILL_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{94}" style="margin-top:0pt;margin-bottom:0pt">a12.CURR_NM  CURR_NM,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{96}" style="margin-top:0pt;margin-bottom:0pt">a11.BASE_ACCT_ID  BASE_ACCT_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{98}" style="margin-top:0pt;margin-bottom:0pt">a11.BASIC_SUPP_NO  BASIC_SUPP_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{100}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM1  CM_EMB_NM1,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{102}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_DT  TRANS_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{104}" style="margin-top:0pt;margin-bottom:0pt">a11.GEN_MJR_INDUS_CD  GEN_MJR_INDUS_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{106}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_INDUS_DESC_CD  SE_INDUS_DESC_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{108}" style="margin-top:0pt;margin-bottom:0pt">a11.SUBM_CURR_CD  SUBM_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{110}" style="margin-top:0pt;margin-bottom:0pt">a11.CTRY_ID  CTRY_ID_2,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{112}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO  SE_NO_0924,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{114}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_SEQ_NO  TRANS_SEQ_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{116}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_MO_NO  YR_MO_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{118}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_NO  YR_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{120}" style="margin-top:0pt;margin-bottom:0pt">Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End  ACCT_STA_IN_TX,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{122}" style="margin-top:0pt;margin-bottom:0pt">a11.CG_ID  CG_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{124}" style="margin-top:0pt;margin-bottom:0pt">a11.COST_CTR_CD  COST_CTR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{126}" style="margin-top:0pt;margin-bottom:0pt">a11.EMP_ID  EMP_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{128}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM  CM_EMB_NM_New,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{130}" style="margin-top:0pt;margin-bottom:0pt">a11.CARD_MKT_RGN_CD  CARD_MKT_RGN_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{132}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO  SE_NO_0923,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{134}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &gt; 0 THEN a11.BILL_AM ELSE 0 END)  WJXBFS1,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{136}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &lt; 0 THEN a11.BILL_AM ELSE 0 END)  WJXBFS2,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{138}" style="margin-top:0pt;margin-bottom:0pt">sum(CASE WHEN a11.BILL_AM &gt; 0 THEN 1 ELSE 0 END)  WJXBFS3</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{140}" style="margin-top:0pt;margin-bottom:0pt">from	VDW02.V_JAPA_CORP_BILLED_UNBILLED	a11</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{142}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.CURRENCY	a12</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{144}" style="margin-top:0pt;margin-bottom:0pt">  on 	(a11.BILL_CURR_CD = a12.ISO_CURR_CD)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{146}" style="margin-top:0pt;margin-bottom:0pt">where	(a11.CLNT_ORGN_ID in (&#39;012704264      &#39;, &#39;012704283      &#39;, &#39;012704216      &#39;, &#39;012704218      &#39;)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{148}" style="margin-top:0pt;margin-bottom:0pt"> and a11.YR_MO_NO = CASE WHEN extract(month from sysdate) IN (2,3,4,5,6,7,8,9,10,11,12) THEN (concat (extract(year from sysdate),TO_CHAR(SYSDATE, &#39;MM&#39;)) -1) WHEN extract(month from sysdate) IN (1) THEN TO_NUMBER(concat (extract(year from sysdate-31),TO_CHAR(SYSDATE-31, &#39;MM&#39;))) END </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{150}" style="margin-top:0pt;margin-bottom:0pt"> and Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End in (&#39;A&#39;, &#39;X&#39;)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{152}" style="margin-top:0pt;margin-bottom:0pt"> and a11.CONV_CURR_CD in (&#39;ZZZ&#39;)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{154}" style="margin-top:0pt;margin-bottom:0pt"> and a11.RECIP_ID = 0)</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{156}" style="margin-top:0pt;margin-bottom:0pt">group by	a11.BILL_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{158}" style="margin-top:0pt;margin-bottom:0pt">a11.BILL_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{160}" style="margin-top:0pt;margin-bottom:0pt">a12.CURR_NM,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{162}" style="margin-top:0pt;margin-bottom:0pt">a11.BASE_ACCT_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{164}" style="margin-top:0pt;margin-bottom:0pt">a11.BASIC_SUPP_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{166}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM1,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{168}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{170}" style="margin-top:0pt;margin-bottom:0pt">a11.GEN_MJR_INDUS_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{172}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_INDUS_DESC_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{174}" style="margin-top:0pt;margin-bottom:0pt">a11.SUBM_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{176}" style="margin-top:0pt;margin-bottom:0pt">a11.CTRY_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{178}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{180}" style="margin-top:0pt;margin-bottom:0pt">a11.TRANS_SEQ_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{182}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_MO_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{184}" style="margin-top:0pt;margin-bottom:0pt">a11.YR_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{186}" style="margin-top:0pt;margin-bottom:0pt">Case When a11.CANC_RSN_CD = &#39;00&#39; Then &#39;A&#39; Else &#39;X&#39; End,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{188}" style="margin-top:0pt;margin-bottom:0pt">a11.CG_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{190}" style="margin-top:0pt;margin-bottom:0pt">a11.COST_CTR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{192}" style="margin-top:0pt;margin-bottom:0pt">a11.EMP_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{194}" style="margin-top:0pt;margin-bottom:0pt">a11.CM_EMB_NM,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{196}" style="margin-top:0pt;margin-bottom:0pt">a11.CARD_MKT_RGN_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{198}" style="margin-top:0pt;margin-bottom:0pt">a11.SE_NO </p>
+			<br />
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{202}" style="margin-top:0pt;margin-bottom:0pt">insert into ZZTZZ9CYHT9PO002 </p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{204}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ pa01.BILL_DT  BILL_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{206}" style="margin-top:0pt;margin-bottom:0pt">pa01.BILL_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{208}" style="margin-top:0pt;margin-bottom:0pt">pa01.CURR_NM  CURR_NM,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{210}" style="margin-top:0pt;margin-bottom:0pt">pa01.BASE_ACCT_ID  BASE_ACCT_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{212}" style="margin-top:0pt;margin-bottom:0pt">pa01.BASIC_SUPP_NO  BASIC_SUPP_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{214}" style="margin-top:0pt;margin-bottom:0pt">pa01.CM_EMB_NM1  CM_EMB_NM1,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{216}" style="margin-top:0pt;margin-bottom:0pt">pa01.TRANS_DT  TRANS_DT,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{218}" style="margin-top:0pt;margin-bottom:0pt">pa01.GEN_MJR_INDUS_CD  GEN_MJR_INDUS_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{220}" style="margin-top:0pt;margin-bottom:0pt">pa01.SE_INDUS_DESC_CD  SE_INDUS_DESC_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{222}" style="margin-top:0pt;margin-bottom:0pt">pa01.SUBM_CURR_CD  SUBM_CURR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{224}" style="margin-top:0pt;margin-bottom:0pt">pa01.CTRY_ID_2  CTRY_ID_2,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{226}" style="margin-top:0pt;margin-bottom:0pt">pa01.SE_NO_0924  SE_NO_0924,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{228}" style="margin-top:0pt;margin-bottom:0pt">pa01.TRANS_SEQ_NO  TRANS_SEQ_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{230}" style="margin-top:0pt;margin-bottom:0pt">pa01.YR_MO_NO  YR_MO_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{232}" style="margin-top:0pt;margin-bottom:0pt">pa01.YR_NO  YR_NO,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{234}" style="margin-top:0pt;margin-bottom:0pt">pa01.ACCT_STA_IN_TX  ACCT_STA_IN_TX,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{236}" style="margin-top:0pt;margin-bottom:0pt">pa01.CG_ID  CG_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{238}" style="margin-top:0pt;margin-bottom:0pt">pa01.COST_CTR_CD  COST_CTR_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{240}" style="margin-top:0pt;margin-bottom:0pt">pa01.EMP_ID  EMP_ID,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{242}" style="margin-top:0pt;margin-bottom:0pt">pa01.CM_EMB_NM_New  CM_EMB_NM_New,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{244}" style="margin-top:0pt;margin-bottom:0pt">pa01.CARD_MKT_RGN_CD  CARD_MKT_RGN_CD,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{246}" style="margin-top:0pt;margin-bottom:0pt">pa01.SE_NO_0923  SE_NO_0923,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{248}" style="margin-top:0pt;margin-bottom:0pt">pa01.WJXBFS1  WJXBFS1,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{250}" style="margin-top:0pt;margin-bottom:0pt">pa01.WJXBFS2  WJXBFS2,</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{252}" style="margin-top:0pt;margin-bottom:0pt">pa01.WJXBFS3  WJXBFS3</p>
+			<p id="p:{b3973a13-0ac5-cb48-ad49-7672fcd02855}{254}" style="margin-top:0pt;margin-bottom:0pt">from	ZZTB328AWP9OP001	pa01</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{12}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ distinct pa11.CG_ID  CG_ID,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{14}" style="margin-top:0pt;margin-bottom:0pt">SUBSTR(a12.CG_ID,1,4) || &#39;-&#39; || SUBSTR(a12.CG_ID,5,6) || &#39;-&#39; || SUBSTR(a12.CG_ID,11,5)  LEG_NM1,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{16}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_NO_0924  SE_NO_0924,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{18}" style="margin-top:0pt;margin-bottom:0pt">pa11.CARD_MKT_RGN_CD  CARD_MKT_RGN_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{20}" style="margin-top:0pt;margin-bottom:0pt">a110.CARD_MKT_RGN_NM  CARD_MKT_RGN_NM,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{22}" style="margin-top:0pt;margin-bottom:0pt">pa11.BASE_ACCT_ID  BASE_ACCT_ID,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{24}" style="margin-top:0pt;margin-bottom:0pt">pa11.BASIC_SUPP_NO  BASIC_SUPP_NO,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{26}" style="margin-top:0pt;margin-bottom:0pt">pa11.CM_EMB_NM1  CM_EMB_NM1,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{28}" style="margin-top:0pt;margin-bottom:0pt">pa11.ACCT_STA_IN_TX  ACCT_STA_IN_TX,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{30}" style="margin-top:0pt;margin-bottom:0pt">a19.ACCT_STA_DS_TX  ACCT_STA_DS_TX,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{32}" style="margin-top:0pt;margin-bottom:0pt">a12.CG_ID  CG_ID0,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{34}" style="margin-top:0pt;margin-bottom:0pt">a12.DBA_NM  DBA_NM,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{36}" style="margin-top:0pt;margin-bottom:0pt">pa11.COST_CTR_CD  COST_CTR_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{38}" style="margin-top:0pt;margin-bottom:0pt">pa11.EMP_ID  EMP_ID,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{40}" style="margin-top:0pt;margin-bottom:0pt">pa11.CM_EMB_NM_New  CM_EMB_NM_New,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{42}" style="margin-top:0pt;margin-bottom:0pt">pa11.GEN_MJR_INDUS_CD  GEN_MJR_INDUS_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{44}" style="margin-top:0pt;margin-bottom:0pt">a14.SE_MAJ_IND_NM  SE_MAJ_IND_NM,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{46}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_INDUS_DESC_CD  SE_INDUS_DESC_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{48}" style="margin-top:0pt;margin-bottom:0pt">case when a15.SE_INDUS_DESC_CD IN (&#39;999&#39;)  then &#39; &#39; else a15.SE_INDUS_DS_TX end  SE_INDUS_DS_TX,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{50}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_NO_0923  SE_NO_0923,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{52}" style="margin-top:0pt;margin-bottom:0pt">a13.DBA_NM  DBA_NAME,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{54}" style="margin-top:0pt;margin-bottom:0pt">Case when a13.CITY_NM_TX is NULL then &#39;&#39; Else a13.CITY_NM_TX End  CITY_NM_TX,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{56}" style="margin-top:0pt;margin-bottom:0pt">pa11.CTRY_ID_2  CTRY_ID_2,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{58}" style="margin-top:0pt;margin-bottom:0pt">a17.CTRY_NM_TX  CTRY_NM_TX_2,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{60}" style="margin-top:0pt;margin-bottom:0pt">pa11.TRANS_SEQ_NO  TRANS_SEQ_NO,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{62}" style="margin-top:0pt;margin-bottom:0pt">pa11.BILL_DT  BILL_DT,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{64}" style="margin-top:0pt;margin-bottom:0pt">pa11.YR_MO_NO  YR_MO_NO,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{66}" style="margin-top:0pt;margin-bottom:0pt">a18.MO_DS_TX  MO_DS_TX,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{68}" style="margin-top:0pt;margin-bottom:0pt">pa11.YR_NO  YR_NO,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{70}" style="margin-top:0pt;margin-bottom:0pt">pa11.BILL_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{72}" style="margin-top:0pt;margin-bottom:0pt">pa11.CURR_NM  CURR_NM,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{74}" style="margin-top:0pt;margin-bottom:0pt">pa11.SUBM_CURR_CD  SUBM_CURR_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{76}" style="margin-top:0pt;margin-bottom:0pt">a16.CURR_NM  CURR_NM0,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{78}" style="margin-top:0pt;margin-bottom:0pt">pa11.TRANS_DT  TRANS_DT,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{80}" style="margin-top:0pt;margin-bottom:0pt">pa11.WJXBFS1  WJXBFS1,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{82}" style="margin-top:0pt;margin-bottom:0pt">pa11.WJXBFS2  WJXBFS2,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{84}" style="margin-top:0pt;margin-bottom:0pt">pa11.WJXBFS3  WJXBFS3</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{86}" style="margin-top:0pt;margin-bottom:0pt">from	ZZTZZ9CYHT9PO002	pa11</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{88}" style="margin-top:0pt;margin-bottom:0pt">join	VDW02.V_CLIENT_GROUP_1	a12</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{90}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.CG_ID = a12.CG_ID)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{92}" style="margin-top:0pt;margin-bottom:0pt">join	VDW02.SE_DETAIL	a13</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{94}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.CTRY_ID_2 = a13.CTRY_ID and </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{96}" style="margin-top:0pt;margin-bottom:0pt">pa11.GEN_MJR_INDUS_CD = a13.GEN_MJR_INDUS_CD and </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{98}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_INDUS_DESC_CD = a13.SE_INDUS_DS_CD and </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{100}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_NO_0924 = a13.SE_NO)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{102}" style="margin-top:0pt;margin-bottom:0pt">left outer join	DW02.GEN_MJR_INDUS	a14</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{104}" style="margin-top:0pt;margin-bottom:0pt">  on 	(a13.GEN_MJR_INDUS_CD = a14.GEN_MJR_INDUS_CD and </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{106}" style="margin-top:0pt;margin-bottom:0pt">pa11.GEN_MJR_INDUS_CD = a14.GEN_MJR_INDUS_CD)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{108}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.SE_IND_ACCT_SMRY	a15</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{110}" style="margin-top:0pt;margin-bottom:0pt">  on 	(a13.SE_INDUS_DS_CD = a15.SE_INDUS_DESC_CD and </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{112}" style="margin-top:0pt;margin-bottom:0pt">pa11.SE_INDUS_DESC_CD = a15.SE_INDUS_DESC_CD)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{114}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.CURRENCY	a16</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{116}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.SUBM_CURR_CD = a16.ISO_CURR_CD)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{118}" style="margin-top:0pt;margin-bottom:0pt">join	VDW02.V_SE_COUNTRY	a17</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{120}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.CTRY_ID_2 = a17.CTRY_ID)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{122}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.YEAR_MONTH	a18</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{124}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.YR_MO_NO = a18.YR_MO_NO)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{126}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.CANC_RSN_ALIAS	a19</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{128}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.ACCT_STA_IN_TX = Case When a19.ACCT_STA_IN_TX = &#39;A&#39; Then &#39;A&#39; Else &#39;X&#39; End)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{130}" style="margin-top:0pt;margin-bottom:0pt">join	DW02.CARD_MKT_REGION	a110</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{132}" style="margin-top:0pt;margin-bottom:0pt">  on 	(pa11.CARD_MKT_RGN_CD = a110.CARD_MKT_RGN_CD)</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{136}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ a01.ISO_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{138}" style="margin-top:0pt;margin-bottom:0pt">a01.CURR_NM  CURR_NM</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{140}" style="margin-top:0pt;margin-bottom:0pt">from	DW02.CURRENCY	a01</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{144}" style="margin-top:0pt;margin-bottom:0pt">create table ZZTLBG0R019OP000(</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{146}" style="margin-top:0pt;margin-bottom:0pt">BILL_CURR_CD	CHAR(3), </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{148}" style="margin-top:0pt;margin-bottom:0pt">CURR_NM	CHAR(30))</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{152}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{156}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{160}" style="margin-top:0pt;margin-bottom:0pt">insert into ZZTLBG0R019OP000 values (&#39;ADP&#39;, &#39;ANDORRAN PESETA               &#39;)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{162}" style="margin-top:0pt;margin-bottom:0pt">[The rest of the INSERT statements have been omitted from display].</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{166}" style="margin-top:0pt;margin-bottom:0pt">select	/*+ PARALLEL (8) */ a01.ISO_CURR_CD  BILL_CURR_CD,</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{168}" style="margin-top:0pt;margin-bottom:0pt">a01.CURR_NM  CURR_NM</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{170}" style="margin-top:0pt;margin-bottom:0pt">from	DW02.CURRENCY	a01</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{174}" style="margin-top:0pt;margin-bottom:0pt">create table ZZTLBG0R019OP000(</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{176}" style="margin-top:0pt;margin-bottom:0pt">BILL_CURR_CD	CHAR(3), </p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{178}" style="margin-top:0pt;margin-bottom:0pt">CURR_NM	CHAR(30))</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{182}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION FORCE PARALLEL QUERY PARALLEL 8;</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{186}" style="margin-top:0pt;margin-bottom:0pt">ALTER SESSION SET CURSOR_SHARING = FORCE;</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{190}" style="margin-top:0pt;margin-bottom:0pt">insert into ZZTLBG0R019OP000 values (&#39;ADP&#39;, &#39;ANDORRAN PESETA               &#39;)</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{192}" style="margin-top:0pt;margin-bottom:0pt">[The rest of the INSERT statements have been omitted from display].</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{196}" style="margin-top:0pt;margin-bottom:0pt">drop table ZZTLBG0R019OP000 purge</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{200}" style="margin-top:0pt;margin-bottom:0pt">drop table ZZTB328AWP9OP001 purge</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{204}" style="margin-top:0pt;margin-bottom:0pt">drop table ZZTZZ9CYHT9PO002 purge</p>
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{208}" style="margin-top:0pt;margin-bottom:0pt">[Analytical engine calculation steps:</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{210}" style="margin-top:0pt;margin-bottom:0pt">1.  Calculate metric: &lt;Net Billed Amount&gt; in the dataset</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{212}" style="margin-top:0pt;margin-bottom:0pt">2.  Perform dynamic aggregation over &lt;Supplier No.&gt;</p>
+			<br />
+			<br />
+			<br />
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{220}" style="margin-top:0pt;margin-bottom:0pt">select	[Bill Date]@[BILL_DT],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{222}" style="margin-top:0pt;margin-bottom:0pt">[Bill Month]@[YR_MO_NO],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{224}" style="margin-top:0pt;margin-bottom:0pt">[Bill Month]@[MO_DS_TX],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{226}" style="margin-top:0pt;margin-bottom:0pt">[Bill Year]@[YR_NO],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{228}" style="margin-top:0pt;margin-bottom:0pt">[Billed Currency]@[BILL_CURR_CD],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{230}" style="margin-top:0pt;margin-bottom:0pt">[Billed Currency]@[CURR_NM],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{232}" style="margin-top:0pt;margin-bottom:0pt">[Card Region]@[CARD_MKT_RGN_CD],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{234}" style="margin-top:0pt;margin-bottom:0pt">[Card Region]@[CARD_MKT_RGN_NM],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{236}" style="margin-top:0pt;margin-bottom:0pt">[Cardmember Acct. No.]@[BASE_ACCT_ID],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{238}" style="margin-top:0pt;margin-bottom:0pt">[Cardmember Acct. No.]@[BASIC_SUPP_NO],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{240}" style="margin-top:0pt;margin-bottom:0pt">[Cardmember Acct. No.]@[CM_EMB_NM],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{242}" style="margin-top:0pt;margin-bottom:0pt">[Cardmember Status]@[ACCT_STA_IN_TX],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{244}" style="margin-top:0pt;margin-bottom:0pt">[Cardmember Status]@[ACCT_STA_DS_TX],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{246}" style="margin-top:0pt;margin-bottom:0pt">[Charge Date]@[TRANS_DT],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{248}" style="margin-top:0pt;margin-bottom:0pt">[Control Acct. Name]@[CG_ID],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{250}" style="margin-top:0pt;margin-bottom:0pt">[Control Acct. Name]@[DBA_NM],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{252}" style="margin-top:0pt;margin-bottom:0pt">[Control Acct. No.]@[CG_ID],</p>
+			<p id="p:{24f9501c-e1bf-e94e-9fb2-0cb4587a046d}{254}" style="margin-top:0pt;margin-bottom:0pt">[Control Acct. No.]@[LEG_NM],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{10}" style="margin-top:0pt;margin-bottom:0pt">[Cost Center]@[COST_CTR_CD],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{12}" style="margin-top:0pt;margin-bottom:0pt">[Employee ID]@[EMP_ID],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{14}" style="margin-top:0pt;margin-bottom:0pt">[Full Name]@[CM_EMB_NM_New],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{16}" style="margin-top:0pt;margin-bottom:0pt">[Genesis Industry]@[GEN_MJR_INDUS_CD],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{18}" style="margin-top:0pt;margin-bottom:0pt">[Genesis Industry]@[SE_MAJ_IND_NM],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{20}" style="margin-top:0pt;margin-bottom:0pt">[Genesis Sub-Industry]@[SE_INDUS_DESC_CD],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{22}" style="margin-top:0pt;margin-bottom:0pt">[Genesis Sub-Industry]@[SE_INDUS_DS_TX],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{24}" style="margin-top:0pt;margin-bottom:0pt">[Submitted Currency]@[SUBM_CURR_CD],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{26}" style="margin-top:0pt;margin-bottom:0pt">[Submitted Currency]@[CURR_NM],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{28}" style="margin-top:0pt;margin-bottom:0pt">[Supplier City]@[CITY_NM_TX],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{30}" style="margin-top:0pt;margin-bottom:0pt">[Supplier Country]@[CTRY_ID_2],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{32}" style="margin-top:0pt;margin-bottom:0pt">[Supplier Country]@[CTRY_NM_TX_2],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{34}" style="margin-top:0pt;margin-bottom:0pt">[Supplier Name]@[SE_NO_0923],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{36}" style="margin-top:0pt;margin-bottom:0pt">[Supplier Name]@[DBA_NAME],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{38}" style="margin-top:0pt;margin-bottom:0pt">[Transaction ID]@[TRANS_SEQ_NO],</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{40}" style="margin-top:0pt;margin-bottom:0pt">sum([Charge Amount])@{[Bill Date],[Bill Month],[Bill Year],[Billed Currency],[Card Region],[Cardmember Acct. No.],[Cardmember Status],[Charge Date],[Control Acct. Name],[Control Acct. No.],[Cost Center],[Employee ID],[Full Name],[Genesis Industry],[Genesis Sub-Industry],[Submitted Currency],[Supplier City],[Supplier Country],[Supplier Name],[Transaction ID]},</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{42}" style="margin-top:0pt;margin-bottom:0pt">sum([Credit Amount])@{[Bill Date],[Bill Month],[Bill Year],[Billed Currency],[Card Region],[Cardmember Acct. No.],[Cardmember Status],[Charge Date],[Control Acct. Name],[Control Acct. No.],[Cost Center],[Employee ID],[Full Name],[Genesis Industry],[Genesis Sub-Industry],[Submitted Currency],[Supplier City],[Supplier Country],[Supplier Name],[Transaction ID]},</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{44}" style="margin-top:0pt;margin-bottom:0pt">sum([No. of Charges])@{[Bill Date],[Bill Month],[Bill Year],[Billed Currency],[Card Region],[Cardmember Acct. No.],[Cardmember Status],[Charge Date],[Control Acct. Name],[Control Acct. No.],[Cost Center],[Employee ID],[Full Name],[Genesis Industry],[Genesis Sub-Industry],[Submitted Currency],[Supplier City],[Supplier Country],[Supplier Name],[Transaction ID]}</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{46}" style="margin-top:0pt;margin-bottom:0pt">from	Cardmember Activity</p>
+			<br />
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{50}" style="margin-top:0pt;margin-bottom:0pt">3.  Calculate metric: &lt;Net Billed Amount&gt; at original data level in the view</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{52}" style="margin-top:0pt;margin-bottom:0pt">4.  Calculate subtotal: &lt;Total&gt; </p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{54}" style="margin-top:0pt;margin-bottom:0pt">5.  Calculate metric: &lt;Net Billed Amount&gt; at subtotal levels in the view</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{56}" style="margin-top:0pt;margin-bottom:0pt">6.  Perform cross-tabbing</p>
+			<p id="p:{d49cb005-771e-2649-82f1-e49f245cf9a8}{58}" style="margin-top:0pt;margin-bottom:0pt">]</p>
+		</div>
+		<div id="div:{0346788d-6563-484c-9164-e0cc3bdf29ad}{117}" style="position:absolute;left:49px;top:104px;width:697px">
+			<p id="p:{0346788d-6563-484c-9164-e0cc3bdf29ad}{119}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-size:12pt;background-color:blue;font-weight:bold">Incident Description:</span></p>
+			<br />
+			<p id="p:{0346788d-6563-484c-9164-e0cc3bdf29ad}{129}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-weight:bold;text-decoration:underline">Jeffrey Collado:</span></p>
+			<p id="p:{0346788d-6563-484c-9164-e0cc3bdf29ad}{137}" style="margin-top:0pt;margin-bottom:0pt">Re: Atwork Activity Report vs Global Org</p>
+			<br />
+			<img id="img:{6a55c130-3fec-c245-8783-77330e911128}{19}" alt="AMERICAN 
+EXPRESS " width="348" height="348" src="https://graph.microsoft.com/v1.0/users('ctchalland@gmail.com')/onenote/resources/0-6d987cda4433eb489997b18c3be36995!1-9E5BF352FFB0D317!1854/$value" data-src-type="image/png" data-fullres-src="https://graph.microsoft.com/v1.0/users('ctchalland@gmail.com')/onenote/resources/0-6d987cda4433eb489997b18c3be36995!1-9E5BF352FFB0D317!1854/$value" data-fullres-src-type="image/png" />
+			<br />
+			<p id="p:{0346788d-6563-484c-9164-e0cc3bdf29ad}{140}" style="margin-top:0pt;margin-bottom:0pt">Testing </p>
+			<br />
+			<br />
+			<br />
+			<p id="p:{6a55c130-3fec-c245-8783-77330e911128}{25}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-weight:bold;text-decoration:underline">Cole:</span></p>
+			<p id="p:{6a55c130-3fec-c245-8783-77330e911128}{37}" style="margin-top:0pt;margin-bottom:0pt">Testing2</p>
+		</div>
+		<div id="div:{2154172e-e43c-3c42-aa6f-f1df714af219}{196}" style="position:absolute;left:788px;top:106px;width:694px">
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{198}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-size:12pt;background-color:olive;font-weight:bold">Response to Ticket:</span></p>
+			<br />
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{204}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-weight:bold;text-decoration:underline">Cole:</span></p>
+			<br />
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{220}" style="margin-top:0pt;margin-bottom:0pt">Testing</p>
+			<object data-attachment="americanexpress.com_cookies.txt" type="text/plain" data="https://graph.microsoft.com/v1.0/users('ctchalland@gmail.com')/onenote/resources/0-be3b9907737cb447bbda69f9efd8d7e5!1-9E5BF352FFB0D317!1854/$value" />
+			<br />
+		</div>
+		<div id="div:{2154172e-e43c-3c42-aa6f-f1df714af219}{231}" style="position:absolute;left:1533px;top:103px;width:694px">
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{233}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-size:12pt;background-color:green;font-weight:bold">Resolution:</span></p>
+			<br />
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{239}" style="margin-top:0pt;margin-bottom:0pt"><span style="font-weight:bold;text-decoration:underline">Cole:</span></p>
+			<br />
+			<p id="p:{2154172e-e43c-3c42-aa6f-f1df714af219}{245}" style="margin-top:0pt;margin-bottom:0pt">Testing</p>
+			<object data-attachment="Good_americanexpress.com_cookies.txt" type="text/plain" data="https://graph.microsoft.com/v1.0/users('ctchalland@gmail.com')/onenote/resources/0-3d6920751acba64c8a6e047c7ec7025a!1-9E5BF352FFB0D317!1854/$value" />
+		</div>
+	</body>
+</html>
